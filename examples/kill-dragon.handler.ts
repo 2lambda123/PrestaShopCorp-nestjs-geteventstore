@@ -18,6 +18,6 @@ export class KillDragonHandler {
       dragonId: command.dragonId,
     });
 
-    await heroAggregate.commit();
+    heroAggregate.commit();
   }
 }
