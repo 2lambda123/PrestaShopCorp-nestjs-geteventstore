@@ -75,7 +75,7 @@ see events on [the dashboard](http://localhost:20113/web/index.html#/streams/her
 - `kill-dragon.handler` fetch the hero and build a `hero.aggregate` merging db and command data
 # Call killEnemy() method on the `hero.aggregate` from the `kill-dragon.handler`
 - `hero.aggregate` kill the enemy and apply `hero-killed-dragon.event`
-- `kill-dragon.handler` commit() on `hero.aggregate` (write all events on aggregate)
+- `kill-dragon.handler` commit() (can be done after each call) on `hero.aggregate` (write all events on aggregate)
 - Eventstore stores the event on event's stream, applying idempotency (mean if you do it twice event is ignored the other times)
 - `hero-killed-dragon.handler` receive the event from Eventstore and log (can run in another process)
 # Receive the event from Eventstore in `heroes-sagas`, perform some logic, and send `drop-ancient-item-command` to commandBus
