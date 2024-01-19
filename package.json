@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@nestjs/common": "^7.6.15",
-    "@nestjs/core": "^7.6.15",
+    "@nestjs/core": "^9.0.5",
     "@nestjs/cqrs": "^7.0.1",
     "@nestjs/platform-express": "^7.6.11",
     "@nestjs/terminus": "^7.1.2",
